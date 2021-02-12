@@ -18,6 +18,7 @@ const partial_dir = path.join(__dirname,'../template/partials')
 //setup static dir to serve
 app.use(express.static(public_Dir))
 
+const port = process.env.PORT
 
 
 
@@ -63,7 +64,6 @@ app.get('*', (request ,response) =>{
 })
 
 
-app.listen(3000, ()=>{
-    console.log('server is up running on port 3000')
+app.listen(3000, () => {
+    console.log('server is up running on port ' + port)
 })
-
